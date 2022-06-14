@@ -20,7 +20,7 @@
         <![endif]-->
 
     <script src="" async defer></script>
-    <form></form>
+    <form action="/push" method="post">
     <table border="0">
         <tr>
             <td>
@@ -37,7 +37,10 @@
         <tr>
             <td>
                 <label for="gender">Gender: </label>
-                <input type="radio" id="gender" name="gender">
+                <input type="checkbox" id="male" name="male" value="male">
+                <label for="male"> Male</label>
+                <input type="checkbox" id="female" name="female" value="female">
+                <label for="female"> Female</label>
             </td>
         </tr>
         <tr>
@@ -57,7 +60,13 @@
                 <input type="date" id="dob" name="dob">
             </td>
         </tr>
+        <tr>
+        <td>
+            <input type = "submit" value = "submit" />
+        </td>
+        </tr>
     </table>
+    </form>
 </body>
 
 </html>

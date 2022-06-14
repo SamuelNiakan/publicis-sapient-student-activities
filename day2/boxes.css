@@ -1,0 +1,28 @@
+
+.top_box {
+    border: 5px solid red;
+    width: 800px;
+}
+.left_box {
+    border: 5px solid red;
+    float: left;
+    margin-right: 30px;
+    width: 100px;
+}
+
+.right_box {
+    border: 5px solid red;
+    float: right;
+    margin-left: 40px;
+    width: 100px;
+}
+
+.middle_box {
+    border: 5px solid red;
+    width: 500px;
+}
+
+.lower_box {
+    border: 5px solid red;
+    width: 800px;
+}
