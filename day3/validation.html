@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <script>
+        function validate_form() {
+            if (document.form_to_validate.fname.value.length <= 3) {
+                return false;
+            }
+            if (document.form_to_validate.lname.value.length <= 2) {
+                return false;
+            }
+            if (document.form_to_validate.pword.value.length <= 3) {
+                return false;
+            }
+            if (document.form_to_validate.pword.value != document.form_to_validate.confirm_pword.value) {
+                return false;
+            }
+            if (document.form_to_validate.sex.value.length <= 0) {
+                return false;
+            }
+            if (document.form_to_validate.skills.value.length <= 0) {
+                return false;
+            }
+            return true;
+        } // func
+
+    </script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <h2 align="left">Submit Personal Info</h2>
+    <hr>
+    <form method="post" action="validation.html" name="form_to_validate" onsubmit="return validate_form()">
+        <h3 align="left">Form</h2>
+        <table>
+            <tr>
+                <td>
+                    <label>F_Name </label>
+                </td>
+                <td>
+                    <input type="text" name="fname" >
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>L_Name</label>
+                </td>
+                <td>
+                    <input type="text" name="lname" >
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password</label>
+                </td>
+                <td>
+                    <input type="password" name="pword" >
+
+                </td>
+            </tr>
+            <!--  -->
+            <tr>
+                <td>
+                    <label>Confirm</label>
+                </td>
+                <td>
+                    <input type="password" name="confirm_pword" >
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Sex</label>
+                </td>
+                <td>
+                    <input type="radio" name="sex" value="Male">Female
+                    <input type="radio" name="sex" value="Female">Male
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Skills</label>
+                </td>
+                <td>
+                    <input type="radio" name="skills" value="java">Java
+                    <input type="radio" name="skills" value="C">C
+                    <input type="radio" name="skills" value="C++">C++
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="left" style="position: relative;">
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="clear" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
